@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cednpxkgvstli"]
+[gd_scene load_steps=6 format=3 uid="uid://cednpxkgvstli"]
 
 [ext_resource type="Texture2D" uid="uid://dvb1rxofd4w3p" path="res://frames/Frame teatro.png" id="1_iarht"]
 [ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_0pw06"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="3_2uunt"]
 [ext_resource type="Texture2D" uid="uid://bxf0ccu8v32lk" path="res://assets/sairteatro.png" id="4_0pw06"]
+[ext_resource type="VideoStream" uid="uid://ds0kggbvf4e1k" path="res://video/diogenes.ogv" id="5_2uunt"]
 
 [node name="Paginateatro" type="Node2D"]
 
@@ -28,3 +29,11 @@ offset_bottom = 1021.0
 icon = ExtResource("4_0pw06")
 script = ExtResource("3_2uunt")
 pagina_destino = "res://container/pagina7.tscn"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 218.0
+offset_top = 241.0
+offset_right = 578.0
+offset_bottom = 721.0
+stream = ExtResource("5_2uunt")
+autoplay = true
