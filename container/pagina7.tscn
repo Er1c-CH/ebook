@@ -37,3 +37,11 @@ offset_right = 753.0
 offset_bottom = 122.0
 script = ExtResource("5_ogh6e")
 audio_path = "res://audios/pagina7.wav"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 362.0
+offset_right = 293.0
+offset_bottom = 855.0
+script = ExtResource("2_hytfl")
+pagina_destino = "res://container/paginateatro.tscn"

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cednpxkgvstli"]
+
+[ext_resource type="Texture2D" uid="uid://dvb1rxofd4w3p" path="res://frames/Frame teatro.png" id="1_iarht"]
+[ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_0pw06"]
+[ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="3_2uunt"]
+[ext_resource type="Texture2D" uid="uid://bxf0ccu8v32lk" path="res://assets/sairteatro.png" id="4_0pw06"]
+
+[node name="Paginateatro" type="Node2D"]
+
+[node name="FrameTeatro" type="Sprite2D" parent="."]
+position = Vector2(384, 512)
+texture = ExtResource("1_iarht")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 532.0
+offset_top = 929.0
+offset_right = 764.0
+offset_bottom = 1019.0
+icon = ExtResource("2_0pw06")
+script = ExtResource("3_2uunt")
+pagina_destino = "res://container/pagina8.tscn"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 923.0
+offset_right = 214.0
+offset_bottom = 1021.0
+icon = ExtResource("4_0pw06")
+script = ExtResource("3_2uunt")
+pagina_destino = "res://container/pagina7.tscn"
