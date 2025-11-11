@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpl407bpqibkd"]
+[gd_scene load_steps=5 format=3 uid="uid://bpl407bpqibkd"]
 
 [ext_resource type="Texture2D" uid="uid://bov723hv6u3tl" path="res://frames/Frame 1.png" id="1_4ic43"]
 [ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_cjixs"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_rmxan"]
+[ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="4_duoqj"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,3 +19,11 @@ offset_bottom = 1025.0
 icon = ExtResource("2_cjixs")
 script = ExtResource("2_rmxan")
 pagina_destino = "res://container/pagina2.tscn"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 537.0
+offset_top = 38.0
+offset_right = 740.0
+offset_bottom = 117.0
+script = ExtResource("4_duoqj")
+audio_path = "res://audios/pagina1.wav"
