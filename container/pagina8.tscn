@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://jp6n7ilodqoc"]
+
+[ext_resource type="Texture2D" uid="uid://dhy1id2lbnhxb" path="res://frames/Frame 8.png" id="1_wyfif"]
+[ext_resource type="Texture2D" uid="uid://unhfs5rtxvye" path="res://assets/inicial.png" id="2_0p7p3"]
+[ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_rj6li"]
+[ext_resource type="Texture2D" uid="uid://chfpf6fiselj8" path="res://assets/anterior.png" id="4_8ww23"]
+
+[node name="Pagina8" type="Node2D"]
+
+[node name="Frame8" type="Sprite2D" parent="."]
+position = Vector2(384, 513)
+texture = ExtResource("1_wyfif")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 552.0
+offset_top = 923.0
+offset_right = 767.0
+offset_bottom = 1027.0
+icon = ExtResource("2_0p7p3")
+script = ExtResource("2_rj6li")
+pagina_destino = "res://container/pagina1.tscn"
+
+[node name="Button2" type="Button" parent="."]
+offset_top = 934.0
+offset_right = 229.0
+offset_bottom = 1023.0
+icon = ExtResource("4_8ww23")
+script = ExtResource("2_rj6li")
+pagina_destino = "res://container/pagina7.tscn"

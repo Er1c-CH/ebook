@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpl407bpqibkd"]
+
+[ext_resource type="Texture2D" uid="uid://bov723hv6u3tl" path="res://frames/Frame 1.png" id="1_4ic43"]
+[ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_cjixs"]
+[ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_rmxan"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Frame1" type="Sprite2D" parent="."]
+position = Vector2(384, 513)
+texture = ExtResource("1_4ic43")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 535.0
+offset_top = 930.0
+offset_right = 770.0
+offset_bottom = 1025.0
+icon = ExtResource("2_cjixs")
+script = ExtResource("2_rmxan")
+pagina_destino = "res://container/pagina2.tscn"
