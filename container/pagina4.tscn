@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://1ru1tayqy0ll"]
+[gd_scene load_steps=9 format=3 uid="uid://1ru1tayqy0ll"]
 
 [ext_resource type="Texture2D" uid="uid://bdoj5rq421r8x" path="res://frames/Frame 4.png" id="1_2dxto"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_4tokm"]
 [ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_b8jgf"]
 [ext_resource type="Texture2D" uid="uid://chfpf6fiselj8" path="res://assets/anterior.png" id="4_oeq4d"]
 [ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="5_oeq4d"]
+[ext_resource type="Script" uid="uid://x4uqw5j8r1ii" path="res://container/pergaminho.gd" id="6_jb812"]
+[ext_resource type="Texture2D" uid="uid://cjmc0cp10u6bt" path="res://assets/pergaminhofechado.png" id="6_ntd7o"]
+[ext_resource type="Texture2D" uid="uid://cogwi1u7k2fxu" path="res://assets/pergaminho1.png" id="7_y42s1"]
 
 [node name="Pagina4" type="Node2D"]
 
@@ -37,3 +40,11 @@ offset_right = 753.0
 offset_bottom = 108.0
 script = ExtResource("5_oeq4d")
 audio_path = "res://audios/pagina4.wav"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(371, 785.00006)
+rotation = -2.5900686
+scale = Vector2(0.5, 0.507)
+texture = ExtResource("6_ntd7o")
+script = ExtResource("6_jb812")
+alternate_texture = ExtResource("7_y42s1")
