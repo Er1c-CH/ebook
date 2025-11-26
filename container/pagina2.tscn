@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://2qfpfxorc0po"]
+[gd_scene load_steps=7 format=3 uid="uid://2qfpfxorc0po"]
 
 [ext_resource type="Texture2D" uid="uid://cbq1qsklth8c7" path="res://frames/Frame 2.png" id="1_d1nk7"]
+[ext_resource type="Script" uid="uid://ctqrsaatym4cv" path="res://container/estatua.gd" id="1_oqk1l"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_8nnmt"]
 [ext_resource type="Texture2D" uid="uid://drxx0yxamc8y5" path="res://assets/proximabranco.png" id="2_urjat"]
 [ext_resource type="Texture2D" uid="uid://bjd814wiauhcj" path="res://assets/anteriorbranco.png" id="4_n8b4v"]
 [ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="5_n8b4v"]
 
 [node name="Pagina2" type="Node2D"]
+script = ExtResource("1_oqk1l")
 
-[node name="Frame2" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 position = Vector2(383, 513)
 texture = ExtResource("1_d1nk7")
 
@@ -30,6 +32,30 @@ icon = ExtResource("4_n8b4v")
 script = ExtResource("2_8nnmt")
 pagina_destino = "res://container/pagina1.tscn"
 
+[node name="Buttonpergaminho" type="Button" parent="."]
+offset_left = 420.0
+offset_top = 395.0
+offset_right = 768.0
+offset_bottom = 563.0
+
+[node name="Buttoncoruja" type="Button" parent="."]
+offset_left = 184.0
+offset_top = 235.0
+offset_right = 346.0
+offset_bottom = 508.0
+
+[node name="Buttonlampada" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 89.0
+offset_right = 154.0
+offset_bottom = 531.0
+
+[node name="Buttonmoeda" type="Button" parent="."]
+offset_left = 136.0
+offset_top = 501.0
+offset_right = 456.0
+offset_bottom = 594.0
+
 [node name="TextureButton" type="TextureButton" parent="."]
 offset_left = 525.0
 offset_top = 30.0
@@ -37,3 +63,30 @@ offset_right = 739.0
 offset_bottom = 128.0
 script = ExtResource("5_n8b4v")
 audio_path = "res://audios/pagina2.wav"
+
+[node name="audio_player" type="AudioStreamPlayer2D" parent="."]
+
+[node name="change_timer" type="Timer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 43.0
+offset_top = 592.0
+offset_right = 742.0
+offset_bottom = 871.0
+color = Color(0, 0, 0, 0.4745098)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 31.0
+offset_right = 683.0
+offset_bottom = 269.0
+text = "As filosofias helenísticas surgiram após a morte de Alexandre, em um mundo de incertezas. Elas buscavam orientar a vida prática do indivíduo diante das mudanças políticas e culturais. Mais do que teorias, eram  modos de vida, com foco no autodomínio, no prazer equilibrado ou na tranquilidade diante do destino, oferecendo ao homem comum caminhos para enfrentar suas angústias. 
+
+Toque nos objetos gregos pela cena para Cesar o Grande explicar cada um deles. Explore os pontos e descubra curiosidades sobre as filosofias. "
+autowrap_mode = 3
+
+[connection signal="pressed" from="Buttonpergaminho" to="." method="_on_buttonpergaminho_pressed"]
+[connection signal="pressed" from="Buttoncoruja" to="." method="_on_buttoncoruja_pressed"]
+[connection signal="pressed" from="Buttonlampada" to="." method="_on_buttonlampada_pressed"]
+[connection signal="pressed" from="Buttonmoeda" to="." method="_on_buttonmoeda_pressed"]
