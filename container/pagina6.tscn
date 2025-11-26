@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnthoxfp22py5"]
+[gd_scene load_steps=10 format=3 uid="uid://dnthoxfp22py5"]
 
 [ext_resource type="Texture2D" uid="uid://cevn2bwyhe6r8" path="res://frames/Frame 6.png" id="1_cnw4c"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_glgfw"]
 [ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_nk5sg"]
 [ext_resource type="Texture2D" uid="uid://chfpf6fiselj8" path="res://assets/anterior.png" id="4_emc1b"]
 [ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="5_emc1b"]
+[ext_resource type="PackedScene" uid="uid://c5w0yvkq4u1a0" path="res://container/draggable_object.tscn" id="6_2dkpm"]
+[ext_resource type="Texture2D" uid="uid://2580bvoc01yf" path="res://assets/arrastavel1.png" id="7_okbhg"]
+[ext_resource type="Texture2D" uid="uid://b8knxy0gkhv58" path="res://assets/arrastavel2.png" id="8_okbhg"]
+[ext_resource type="Texture2D" uid="uid://dff7lyfq2f7y6" path="res://assets/arrastavel3.png" id="9_o1de8"]
 
 [node name="Pagina6" type="Node2D"]
 
@@ -37,3 +41,57 @@ offset_right = 758.0
 offset_bottom = 123.0
 script = ExtResource("5_emc1b")
 audio_path = "res://audios/pagina6.wav"
+
+[node name="DraggableObject" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(267, 686)
+rotation = 0.97563905
+object_texture = ExtResource("7_okbhg")
+
+[node name="DraggableObject10" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(510.99997, 839.99994)
+rotation = 0.97563905
+scale = Vector2(0.8, 0.8)
+object_texture = ExtResource("7_okbhg")
+
+[node name="DraggableObject2" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(584, 496)
+object_texture = ExtResource("7_okbhg")
+
+[node name="DraggableObject3" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(223.99998, 568)
+rotation = 0.12217305
+object_texture = ExtResource("7_okbhg")
+
+[node name="DraggableObject4" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(376, 709)
+rotation = 0.12217305
+scale = Vector2(0.3, 0.3)
+object_texture = ExtResource("8_okbhg")
+
+[node name="DraggableObject5" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(362, 849)
+rotation = 0.12217305
+scale = Vector2(0.3, 0.3)
+object_texture = ExtResource("8_okbhg")
+
+[node name="DraggableObject6" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(594, 745.00006)
+rotation = 0.12217305
+scale = Vector2(0.3, 0.3)
+object_texture = ExtResource("8_okbhg")
+
+[node name="DraggableObject7" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(391, 511.00006)
+rotation = -1.3089969
+object_texture = ExtResource("9_o1de8")
+
+[node name="DraggableObject8" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(375, 686)
+scale = Vector2(0.8, 0.8)
+object_texture = ExtResource("9_o1de8")
+
+[node name="DraggableObject9" parent="." instance=ExtResource("6_2dkpm")]
+position = Vector2(169, 840)
+rotation = 1.3962634
+scale = Vector2(0.5, 0.5)
+object_texture = ExtResource("9_o1de8")
