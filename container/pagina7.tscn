@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://mxrxbdycm8ry"]
+[gd_scene load_steps=9 format=3 uid="uid://mxrxbdycm8ry"]
 
 [ext_resource type="Texture2D" uid="uid://b0oqiehjuylm1" path="res://frames/Frame 7.png" id="1_l7nem"]
 [ext_resource type="Texture2D" uid="uid://drxx0yxamc8y5" path="res://assets/proximabranco.png" id="2_0po84"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_hytfl"]
 [ext_resource type="Texture2D" uid="uid://bjd814wiauhcj" path="res://assets/anteriorbranco.png" id="4_ogh6e"]
 [ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="5_ogh6e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogh6e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gi21a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_41p0r"]
 
 [node name="Pagina7" type="Node2D"]
 
@@ -43,5 +49,8 @@ offset_left = 36.0
 offset_top = 362.0
 offset_right = 293.0
 offset_bottom = 855.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ogh6e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gi21a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_41p0r")
 script = ExtResource("2_hytfl")
 pagina_destino = "res://container/paginateatro.tscn"

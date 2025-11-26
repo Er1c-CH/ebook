@@ -42,9 +42,9 @@ script = ExtResource("5_oeq4d")
 audio_path = "res://audios/pagina4.wav"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(371, 785.00006)
-rotation = -2.5900686
-scale = Vector2(0.5, 0.507)
+position = Vector2(405, 650)
+rotation = -0.19373155
+scale = Vector2(0.69335663, 0.6238503)
 texture = ExtResource("6_ntd7o")
 script = ExtResource("6_jb812")
 alternate_texture = ExtResource("7_y42s1")
