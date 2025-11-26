@@ -21,6 +21,7 @@ window/size/viewport_height=1024
 
 [input_devices]
 
+sensors/enable_accelerometer=true
 pointing/emulate_touch_from_mouse=true
 
 [rendering]
