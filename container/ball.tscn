@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2ircmd3uaos0"]
+
+[ext_resource type="Script" uid="uid://bhirki4tl6c4f" path="res://container/ball.gd" id="1_gfdw8"]
+[ext_resource type="Texture2D" uid="uid://c1phjina7v4vm" path="res://assets/ball1.png" id="2_0bvds"]
+[ext_resource type="Texture2D" uid="uid://bbgldrljx3k0n" path="res://assets/ball2.png" id="3_pykxt"]
+[ext_resource type="Texture2D" uid="uid://b6k8up1bpc6xt" path="res://assets/ball3.png" id="4_vis45"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0bvds"]
+radius = 70.5
+
+[node name="Ball" type="Node2D"]
+
+[node name="ball" type="RigidBody2D" parent="."]
+position = Vector2(567, 631)
+script = ExtResource("1_gfdw8")
+texture_normal = ExtResource("2_0bvds")
+texture_cracked = ExtResource("3_pykxt")
+texture_broken = ExtResource("4_vis45")
+
+[node name="Sprite2D" type="Sprite2D" parent="ball"]
+position = Vector2(0, 0.5)
+scale = Vector2(1, 1.0104166)
+texture = ExtResource("2_0bvds")
+region_enabled = true
+region_rect = Rect2(1.3344574, 0.4832163, 96.747894, 96.16856)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+shape = SubResource("CircleShape2D_0bvds")
+
+[node name="Label" type="Label" parent="ball"]
+offset_left = -62.0
+offset_top = -82.0
+offset_right = 65.0
+offset_bottom = -48.0

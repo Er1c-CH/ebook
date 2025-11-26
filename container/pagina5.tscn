@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmq4h6xtuwbb5"]
+[gd_scene load_steps=9 format=3 uid="uid://bmq4h6xtuwbb5"]
 
 [ext_resource type="Texture2D" uid="uid://eog2n5v35knn" path="res://frames/Frame 5.png" id="1_yhmns"]
 [ext_resource type="Texture2D" uid="uid://45ynl8g3tycx" path="res://assets/proxima.png" id="2_idhx8"]
 [ext_resource type="Script" uid="uid://bquwlmnyhilwe" path="res://container/trocar_pagina.gd" id="2_whquh"]
 [ext_resource type="Texture2D" uid="uid://chfpf6fiselj8" path="res://assets/anterior.png" id="4_fhjoc"]
 [ext_resource type="Script" uid="uid://bxlnqfjfot57g" path="res://container/audioplayer.gd" id="5_fhjoc"]
+[ext_resource type="PackedScene" uid="uid://d2ircmd3uaos0" path="res://container/ball.tscn" id="6_6nspi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dkrx"]
+size = Vector2(863, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_is2sv"]
+size = Vector2(40, 897)
 
 [node name="Pagina5" type="Node2D"]
 
@@ -37,3 +44,37 @@ offset_right = 749.0
 offset_bottom = 111.0
 script = ExtResource("5_fhjoc")
 audio_path = "res://audios/pagina5.wav"
+
+[node name="chao" type="StaticBody2D" parent="."]
+position = Vector2(379, 845)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
+position = Vector2(1, 47)
+shape = SubResource("RectangleShape2D_8dkrx")
+
+[node name="chao2" type="StaticBody2D" parent="."]
+position = Vector2(387, -71)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao2"]
+position = Vector2(1, 47)
+shape = SubResource("RectangleShape2D_8dkrx")
+
+[node name="parede1" type="StaticBody2D" parent="."]
+position = Vector2(31, 526)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede1"]
+position = Vector2(-54, -95.5)
+shape = SubResource("RectangleShape2D_is2sv")
+
+[node name="parede2" type="StaticBody2D" parent="."]
+position = Vector2(842, 534)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="parede2"]
+position = Vector2(-54, -95.5)
+shape = SubResource("RectangleShape2D_is2sv")
+
+[node name="Ball" parent="." instance=ExtResource("6_6nspi")]
+position = Vector2(84, 159)
+
+[node name="Ball2" parent="." instance=ExtResource("6_6nspi")]
+position = Vector2(-445, 165)
