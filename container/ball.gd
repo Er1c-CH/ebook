@@ -95,12 +95,16 @@ func _show_random_text():
 	await get_tree().create_timer(3.0).timeout
 	label.visible = false
 
-func _process(delta):
+func _process(_delta):
 	# Manter a label sempre horizontal (sem rotação)
 	if label.visible:
 		label.rotation = -rotation  # Compensa a rotação da bola
-	
-	if Input.is_action_pressed("ui_left"):
+		
+func _physics_process(_delta: float) -> void:
+	var accel_values = Input.get_accelerometer()
+	var dir = sign(accel_values.x)
+	'''if Input.is_action_pressed("ui_left"):
 		apply_central_impulse(Vector2(-20, 0))
 	if Input.is_action_pressed("ui_right"):
-		apply_central_impulse(Vector2(20, 0))
+		apply_central_impulse(Vector2(20, 0))'''
+	apply_central_impulse(Vector2(dir*20, 0))
